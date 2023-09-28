@@ -5,6 +5,8 @@ import java.util.HashMap;
 
 /*
  * 
+
+ STARTING BOTTOM LEFT CORNER, X IS GOAL
   	*******@@@****X
 	@****@@@@@@@***
 	@*************1
