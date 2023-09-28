@@ -3,6 +3,28 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
+/*
+ * 
+  	*******@@@****X
+	@****@@@@@@@***
+	@*************1
+ 	*@@@@@@@*******
+	1******@@@@@@@@
+ 	****@**********
+ 	****@****@*****
+ 	****@****@*****
+ 	****@****@*****
+ 	****@****@*****
+ 	*********@*****
+ 	
+ 	The digits such as ‘1’, ‘2’, ‘3’, etc… represent magical squares. These squares will
+teleport you to other matching digit in the maze. For example, the ‘1’ in the above figure,
+if walked on, will transport you to the other ‘1’. It will NOT transport you to the different
+digit spots.
+ 	
+ */
+
+
 public class MagicMaze {
     public char[][] maze;     // 2D array to store the maze
     public String mazeName;  // Name of the maze (e.g., "maze1")
