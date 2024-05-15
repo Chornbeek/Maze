@@ -75,7 +75,7 @@ public class MagicMaze {
         numCols = cols;
         maze = new char[numRows][numCols];
 
-        // Now, you can read the maze data and fill the maze array as before
+        // you can read the maze data and fill the maze array as before
         reader = new BufferedReader(new FileReader(txt));
         for (int i = 0; i < numRows; i++) {
             line = reader.readLine();
@@ -173,27 +173,23 @@ public class MagicMaze {
             sol[x][y] = '.';
             
 
-            /* Move forward in x direction */
+           
             if (x + 1 < numRows && solveMazeR(maze, x + 1, y, sol))
                 return true;
 
-            /* If moving in x direction doesn't give solution then
-               Move down in y direction */
+            
             if (y + 1 < numCols && solveMazeR(maze, x, y + 1, sol))
                 return true;
 
-            /* If moving in y direction doesn't give solution then
-               Move backward in x direction */
+            
             if (x - 1 >= 0 && solveMazeR(maze, x - 1, y, sol))
                 return true;
 
-            /* If moving in x direction backward doesn't give solution then
-               Move upward in y direction */
+            
             if (y - 1 >= 0 && solveMazeR(maze, x, y - 1, sol))
                 return true;
 
-            /* If none of the above movements works then
-               BACKTRACK: unmark x,y as part of solution path */
+           
             sol[x][y] = ' ';
             return false;
         }
@@ -209,7 +205,7 @@ public class MagicMaze {
 		return (x >= 0 && x < numRows && y >= 0 && y < numCols && maze[x][y] != '@');  //Maybe - 1
 	}
 
-    // Main method (for testing purposes)
+    
     public static void main(String[] args) throws IOException {
     	 MagicMaze maze = new MagicMaze("maze2.txt", 11, 15);
     	 
